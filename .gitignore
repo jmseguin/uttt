@@ -1,0 +1,10 @@
+# .NET Core gitignore
+[Bb]in/
+[Oo]bj/
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.doccache
+scripts/

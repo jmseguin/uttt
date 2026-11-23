@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="UTTT.Gui/UTTT.Gui.csproj" />
+  <Project Path="UTTT.Core/UTTT.Core.csproj" />
+  <Project Path="UTTT.Tests/UTTT.Tests.csproj" />
+</Solution>

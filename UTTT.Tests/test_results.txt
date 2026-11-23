@@ -1,0 +1,55 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  UTTT.Core -> C:\GitHub\uttt\UTTT.Core\bin\Debug\net10.0\UTTT.Core.dll
+  UTTT.Tests -> C:\GitHub\uttt\UTTT.Tests\bin\Debug\net10.0\UTTT.Tests.dll
+Test run for C:\GitHub\uttt\UTTT.Tests\bin\Debug\net10.0\UTTT.Tests.dll (.NETCoreApp,Version=v10.0)
+VSTest version 18.0.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.21]     UTTT.Tests.Game.GameEngineTests.MakeMove_WinningMove_GameEnds [FAIL]
+[xUnit.net 00:00:00.21]     UTTT.Tests.Game.UltimateBoardTests.MakeMove_FreeMoveLogic_Works [FAIL]
+  Failed UTTT.Tests.Game.GameEngineTests.MakeMove_WinningMove_GameEnds [55 ms]
+  Error Message:
+   Expected engine.IsGameOver to be True, but found False.
+  Stack Trace:
+     at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+   at UTTT.Tests.Game.GameEngineTests.MakeMove_WinningMove_GameEnds() in C:\GitHub\uttt\UTTT.Tests\Game\GameEngineTests.cs:line 61
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed UTTT.Tests.Game.UltimateBoardTests.MakeMove_FreeMoveLogic_Works [33 ms]
+  Error Message:
+   Expected ub2.ActiveBoardIndex to be 2, but found 4.
+  Stack Trace:
+     at FluentAssertions.Numeric.NumericAssertionsBase`3.Be(T expected, String because, Object[] becauseArgs)
+   at UTTT.Tests.Game.UltimateBoardTests.MakeMove_FreeMoveLogic_Works() in C:\GitHub\uttt\UTTT.Tests\Game\UltimateBoardTests.cs:line 79
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.22]     UTTT.Tests.Players.AiPlayerTests.GetBestMove_MediumLevel_BlocksOpponent [FAIL]
+[xUnit.net 00:00:00.22]     UTTT.Tests.Game.UltimateBoardTests.MakeMove_WinningUTTT_SetsGameWinner [FAIL]
+  Failed UTTT.Tests.Players.AiPlayerTests.GetBestMove_MediumLevel_BlocksOpponent [42 ms]
+  Error Message:
+   Expected move to be UTTT.Core.Game.Move
+{
+    BoardIndex = 0,
+    CellIndex = 2
+}, but found UTTT.Core.Game.Move
+{
+    BoardIndex = 1,
+    CellIndex = 5
+}.
+  Stack Trace:
+     at FluentAssertions.Primitives.ObjectAssertions`2.Be(TSubject expected, String because, Object[] becauseArgs)
+   at UTTT.Tests.Players.AiPlayerTests.GetBestMove_MediumLevel_BlocksOpponent() in C:\GitHub\uttt\UTTT.Tests\Players\AiPlayerTests.cs:line 64
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed UTTT.Tests.Game.UltimateBoardTests.MakeMove_WinningUTTT_SetsGameWinner [1 ms]
+  Error Message:
+   Expected ub.State to be BoardState.XWon {value: 1}, but found BoardState.Available {value: 0}.
+  Stack Trace:
+     at FluentAssertions.Primitives.EnumAssertions`2.Be(TEnum expected, String because, Object[] becauseArgs)
+   at UTTT.Tests.Game.UltimateBoardTests.MakeMove_WinningUTTT_SetsGameWinner() in C:\GitHub\uttt\UTTT.Tests\Game\UltimateBoardTests.cs:line 112
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Failed!  - Failed:     4, Passed:    32, Skipped:     0, Total:    36, Duration: 105 ms - UTTT.Tests.dll (net10.0)
